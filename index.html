@@ -1,585 +1,1225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <meta name="description" content="회계사가 직접 상담하고 꼼꼼하게 관리하는 NOTAX 세무회계. 인천 남동구·연수구·송도 법인기장, 개인사업자 기장, 창업 세무상담 전문.">
-  <meta name="keywords" content="인천세무사추천,법인세무기장,남동구세무상담,연수구세무기장,송도세무기장,인천회계사">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="description" content="회계사가 직접 상담하고 꼼꼼하게 관리하는 NOTAX 세무회계. 인천 남동구·연수구·송도 법인기장, 개인사업자 기장, 창업 세무상담 전문. 합리적인 기장료, 지역 맞춤 서비스">
+  <meta name="keywords" content="인천세무사추천,법인세무기장,남동구세무상담,연수구세무기장,송도세무기장,인천회계사,개인사업자세무,종합소득세">
   <meta property="og:title" content="NOTAX 세무회계 | 인일회계법인 김광수 회계사 | 인천 남동구·연수구·송도">
-  <meta property="og:description" content="회계사가 직접 상담·관리. 법인기장·개인사업자기장·창업세무상담. 365일 09~22시.">
+  <meta property="og:description" content="회계사가 직접 상담·관리. 법인기장·개인사업자기장·창업세무상담. 합리적인 기장료, 인천 지역 맞춤 서비스">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://notaxcpa.github.io/notax/">
+  <meta property="og:image" content="https://notaxcpa.github.io/notax/og_image.webp">
+  <meta property="og:site_name" content="NOTAX 세무회계">
   <meta name="format-detection" content="telephone=no">
-  <title>NOTAX 세무회계 | 인일회계법인 김광수 회계사 | 인천 남동·송도</title>
+  <meta name="naver-site-verification" content="여기에_네이버_소유권_인증코드_입력">
+  <title>NOTAX 세무회계 | 인일회계법인 김광수 회계사 | 인천 남동·송도·연수구</title>
+  
+  <!-- Schema.org 구조화된 데이터 (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "NOTAX 세무회계",
+    "alternateName": "인일회계법인 김광수 회계사",
+    "description": "인천 남동구·연수구·송도 지역 세무회계 전문. 17년 경력 공인회계사가 직접 상담하고 관리합니다.",
+    "url": "https://notaxcpa.github.io/notax/",
+    "telephone": "+821086763827",
+    "email": "notaxcpa@naver.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "남동대로 217 한국산업단지공단 인천지역본부 5층",
+      "addressLocality": "남동구",
+      "addressRegion": "인천광역시",
+      "postalCode": "21558",
+      "addressCountry": "KR"
+    },
+    "openingHours": "Mo-Su 09:00-22:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "22:00"
+      }
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "인천광역시 남동구·연수구·송도"
+    },
+    "priceRange": "₩80,000~",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "세무 서비스",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "법인사업자 기장" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "개인사업자 기장" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "창업 세무상담" } }
+      ]
+    }
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* CSS 변수 - 유지보수 용이 */
     :root {
-      --navy:   #0d1b2a;
-      --navy2:  #1a2f45;
-      --gold:   #c9a84c;
-      --gold2:  #e8c96a;
-      --cream:  #f8f4ee;
-      --cream2: #efe9df;
-      --white:  #ffffff;
-      --text:   #1a1a1a;
-      --muted:  #5a6475;
-      --line:   #ddd5c8;
-      --shadow: 0 20px 60px rgba(13,27,42,0.10);
-      --radius: 20px;
-      --max:    1160px;
+      --primary: #0a58ca;
+      --primary-dark: #084298;
+      --primary-light: #e8f0fe;
+      --primary-soft: #f0f7ff;
+      --white: #ffffff;
+      --gray-200: #e9ecef;
+      --gray-300: #dee2e6;
+      --gray-600: #6c757d;
+      --gray-700: #495057;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --max-width: 1280px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    /* 리셋 - 더 구체적으로 */
+    body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.75;
-      word-break: keep-all;
+      font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--primary-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
 
-    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-    /* TOPBAR */
-    .topbar {
-      background: var(--navy);
-      color: rgba(255,255,255,0.75);
-      font-size: 13px;
-      padding: 9px 0;
-      letter-spacing: 0.01em;
-    }
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .topbar a { color: var(--gold2); font-weight: 700; }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: rgba(248, 244, 238, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 0;
-      gap: 20px;
-    }
-    .brand {
-      font-family: 'Noto Serif KR', serif;
-      font-size: 24px;
+    /* Typography */
+    h1, h2, h3, h4 {
       font-weight: 700;
-      color: var(--navy);
       letter-spacing: -0.02em;
     }
-    .brand em {
-      color: var(--gold);
-      font-style: normal;
-    }
-    .brand small {
-      display: block;
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 11px;
-      color: var(--muted);
-      font-weight: 500;
-      margin-top: 2px;
-      letter-spacing: 0;
-    }
-    .menu {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-    .menu a:hover { color: var(--navy); }
 
-    /* BUTTONS */
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 0 22px;
+      gap: 8px;
+      padding: 14px 28px;
       border-radius: 999px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: .2s;
-      white-space: nowrap;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      text-decoration: none;
       cursor: pointer;
       border: none;
-      text-decoration: none;
     }
-    .btn-primary {
-      background: var(--navy);
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(13,27,42,0.25);
-    }
-    .btn-primary:hover { background: var(--navy2); transform: translateY(-1px); }
-    .btn-gold {
-      background: var(--gold);
-      color: var(--navy);
-      box-shadow: 0 4px 20px rgba(201,168,76,0.35);
-    }
-    .btn-gold:hover { background: var(--gold2); transform: translateY(-1px); }
-    .btn-outline {
-      border: 1.5px solid var(--line);
-      background: var(--white);
-      color: var(--text);
-    }
-    .btn-outline:hover { border-color: var(--navy); }
 
-    /* HERO */
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: var(--primary-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 500;
+      font-size: 14px;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--primary);
+      background: none;
+      border: none;
+    }
+
+    /* Hero Section */
     .hero {
-      padding: 60px 0 48px;
+      padding: 80px 0 60px;
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute;
-      top: -120px; right: -120px;
-      width: 500px; height: 500px;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(10,88,202,0.04) 0%, transparent 70%);
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
+
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: stretch;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
     }
-    .hero-copy {
-      background: var(--white);
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 52px 48px;
-    }
-    .eyebrow {
+
+    .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 7px 14px;
+      gap: 8px;
+      background: var(--primary-light);
+      padding: 6px 16px;
       border-radius: 999px;
-      background: #f0e8d5;
-      color: #8a6020;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      margin-bottom: 20px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
     }
-    .eyebrow::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-    h1 {
-      font-family: 'Noto Serif KR', serif;
-      font-size: clamp(30px, 4vw, 50px);
-      line-height: 1.22;
-      letter-spacing: -0.03em;
-      color: var(--navy);
-    }
-    h1 span { color: var(--gold); }
-    .hero-sub {
-      margin: 20px 0 0;
-      font-size: 17px;
-      color: var(--muted);
-      max-width: 560px;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 32px;
-      flex-wrap: wrap;
-    }
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 32px;
-    }
-    .hpoint {
-      background: var(--cream2);
-      border-radius: 16px;
-      padding: 16px 18px;
-    }
-    .hpoint strong { display: block; font-size: 14px; margin-bottom: 4px; color: var(--navy); }
-    .hpoint span { font-size: 13px; color: var(--muted); }
 
-    /* 우측 카드 */
-    .hero-aside {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--primary-dark);
     }
-    .aside-card {
-      flex: 1;
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--gray-700);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .region-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--primary-soft);
+      padding: 12px 20px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    .region-tag span {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    /* Hero Card */
+    .hero-card {
       background: var(--white);
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 28px;
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--gray-200);
+    }
+
+    .hero-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .hero-card p {
+      color: var(--gray-600);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .contact-buttons {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 12px;
     }
-    .aside-card.dark {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--primary-soft);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 500;
+      transition: all 0.2s;
     }
-    .aside-card.dark .muted { color: rgba(255,255,255,0.65); }
-    .aside-card h3 {
-      font-family: 'Noto Serif KR', serif;
-      font-size: 20px;
-      line-height: 1.4;
-      margin-bottom: 10px;
+
+    .contact-link:hover {
+      background: var(--primary-light);
+      transform: translateX(4px);
     }
-    .aside-card .muted { font-size: 14px; color: var(--muted); }
-    .quick-links { margin-top: 20px; display: grid; gap: 8px; }
-    .quick-link {
+
+    /* 지도 배너 */
+    .map-banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #FEE500 0%, #FDDC00 100%);
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
+      margin-top: 8px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .map-banner:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-banner-icon {
+      font-size: 24px;
+    }
+
+    .map-banner-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .map-banner-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .map-banner-address {
+      font-size: 11px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Section Common */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+      color: var(--primary-dark);
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    .profile-avatar {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+    }
+
+    .profile-title h3 {
+      font-size: 22px;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .profile-title p {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .profile-list {
+      list-style: none;
+    }
+
+    .profile-list li {
+      padding: 10px 0;
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 13px 16px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
       font-size: 14px;
+      color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .profile-list li:last-child {
+      border-bottom: none;
+    }
+
+    .profile-list li::before {
+      content: '✓';
+      color: var(--primary);
       font-weight: 700;
-      color: #fff;
-      transition: .2s;
-    }
-    .quick-link:hover { background: rgba(255,255,255,0.14); }
-    .quick-link-icon { font-size: 18px; width: 28px; text-align: center; }
-
-    /* SECTION 공통 */
-    section { padding: 32px 0; }
-    .box {
-      background: var(--white);
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      padding: 44px;
-    }
-    .sec-head { margin-bottom: 28px; }
-    .sec-label {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .sec-head h2 {
-      font-family: 'Noto Serif KR', serif;
-      font-size: clamp(26px, 3vw, 36px);
-      letter-spacing: -0.025em;
-      line-height: 1.28;
-      color: var(--navy);
-    }
-    .sec-head p {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 15px;
-      max-width: 760px;
     }
 
-    /* SMS CTA Form */
-    .sms-cta-box {
-      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
-      border-radius: 24px;
-      padding: 32px;
-      color: #fff;
-      margin-top: 24px;
-      box-shadow: var(--shadow);
+    .philosophy-card {
+      background: var(--primary-soft);
     }
-    .sms-cta-box h3 {
-      font-family: 'Noto Serif KR', serif;
-      font-size: 24px;
-      margin-bottom: 12px;
-      color: var(--gold2);
-    }
-    .sms-cta-box p {
-      color: rgba(255,255,255,0.75);
+
+    .philosophy-card h3 {
+      font-size: 22px;
       margin-bottom: 20px;
-      font-size: 15px;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .sms-form-grid {
+
+    .philosophy-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--gray-700);
+      margin-bottom: 20px;
+    }
+
+    .philosophy-text strong {
+      color: var(--primary);
+    }
+
+    /* 블로그 배너 */
+    .blog-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 32px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .blog-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .blog-banner-content h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-banner-content p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .blog-banner-btn {
+      background: white;
+      color: var(--primary);
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blog-banner-btn:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Target Grid */
+    .target-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .target-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 24px 16px;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .target-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .target-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .target-card h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .target-card p {
+      font-size: 12px;
+      color: var(--gray-600);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: var(--primary-soft);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .testimonial-stars {
+      color: #FFB800;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--gray-700);
+      margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
       gap: 12px;
     }
-    .sms-form-grid input, .sms-form-grid textarea {
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.25);
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      font-size: 15px;
-      outline: none;
-      transition: 0.2s;
-      font-family: inherit;
-      resize: vertical;
-      width: 100%;
-    }
-    .sms-form-grid input::placeholder, .sms-form-grid textarea::placeholder {
-      color: rgba(255,255,255,0.5);
-    }
-    .sms-form-grid input:focus, .sms-form-grid textarea:focus {
-      border-color: var(--gold2);
-      background: rgba(255,255,255,0.15);
-    }
-    .sms-form-grid textarea { grid-column: span 2; }
-    .sms-submit-row {
-      grid-column: span 2;
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      border-radius: 50%;
       display: flex;
-      justify-content: flex-end;
-      margin-top: 8px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
     }
-    .sms-note {
-      margin-top: 16px;
+
+    .author-info h4 {
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .author-info p {
       font-size: 12px;
-      color: rgba(255,255,255,0.5);
+      color: var(--gray-600);
+    }
+
+    .save-amount {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .process-step {
       text-align: center;
     }
 
-    /* ABOUT 등 (생략된 스타일은 이전과 동일, 필요 시 추가) */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .about-profile { background: var(--navy); border-radius: 22px; padding: 32px; color: #fff; }
-    .profile-name { font-family: 'Noto Serif KR', serif; font-size: 28px; font-weight: 700; margin-bottom: 6px; }
-    .profile-title { color: var(--gold2); font-size: 14px; font-weight: 700; margin-bottom: 20px; }
-    .profile-list { list-style: none; }
-    .profile-list li {
-      padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
-      font-size: 14px; color: rgba(255,255,255,0.82); display: flex; gap: 8px;
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 auto 20px;
+      box-shadow: var(--shadow-md);
     }
-    .profile-list li:last-child { border-bottom: 0; }
-    .profile-list li::before { content: '·'; color: var(--gold2); }
-    .about-desc { background: var(--cream2); border-radius: 22px; padding: 32px; }
-    .about-desc h3 { font-family: 'Noto Serif KR', serif; font-size: 22px; color: var(--navy); margin-bottom: 14px; }
-    .about-desc p { font-size: 15px; color: var(--muted); line-height: 1.85; }
 
-    .reason-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .reason-card { background: var(--cream2); border-radius: 20px; padding: 24px 22px; border: 1px solid var(--line); transition: .2s; }
-    .reason-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .reason-icon { font-size: 32px; margin-bottom: 14px; }
-    .reason-card h3 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
-    .reason-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
-
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .service-card { background: var(--white); border: 1px solid var(--line); border-radius: 22px; padding: 26px 24px; transition: .2s; position: relative; overflow: hidden; }
-    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--navy), var(--gold)); opacity: 0; transition: .2s; }
-    .service-card:hover::before { opacity: 1; }
-    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .service-num { font-size: 11px; font-weight: 800; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 12px; }
-    .service-card h3 { font-size: 18px; color: var(--navy); margin-bottom: 8px; }
-    .service-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
-    .service-tag { display: inline-block; margin-top: 14px; padding: 4px 12px; border-radius: 999px; background: #f0e8d5; color: #8a6020; font-size: 12px; font-weight: 700; }
-
-    .process-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-    .process-track::before { content: ''; position: absolute; top: 28px; left: 40px; right: 40px; height: 2px; background: linear-gradient(90deg, var(--navy) 0%, var(--gold) 100%); z-index: 0; }
-    .pstep { position: relative; z-index: 1; text-align: center; padding: 0 8px; }
-    .pstep-num { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; margin: 0 auto 16px; box-shadow: 0 4px 16px rgba(13,27,42,0.25); }
-    .pstep h3 { font-size: 15px; color: var(--navy); margin-bottom: 6px; }
-    .pstep p { font-size: 13px; color: var(--muted); }
-
-    .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .price-card { border-radius: 24px; padding: 36px 32px; border: 1px solid var(--line); position: relative; overflow: hidden; }
-    .price-card.individual { background: var(--cream2); }
-    .price-card.corp { background: var(--navy); color: #fff; border-color: var(--navy); }
-    .price-card.corp .price-muted { color: rgba(255,255,255,0.6); }
-    .price-card.corp .price-note { border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
-    .price-badge { display: inline-block; padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 16px; }
-    .price-badge.ind { background: #f0e8d5; color: #8a6020; }
-    .price-badge.corp { background: rgba(201,168,76,0.2); color: var(--gold2); }
-    .price-card h3 { font-size: 20px; margin-bottom: 4px; }
-    .price-main { font-family: 'Noto Serif KR', serif; font-size: 42px; font-weight: 700; letter-spacing: -0.04em; color: var(--navy); margin: 12px 0 4px; }
-    .price-card.corp .price-main { color: var(--gold2); }
-    .price-muted { font-size: 14px; color: var(--muted); }
-    .price-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
-    .price-disclaimer { margin-top: 16px; padding: 14px 18px; background: #f5f0e8; border-radius: 14px; font-size: 13px; color: var(--muted); }
-
-    .faq-list { display: grid; gap: 12px; }
-    .faq-item { background: var(--cream2); border-radius: 18px; border: 1px solid var(--line); padding: 22px 24px; cursor: pointer; transition: .2s; }
-    .faq-item:hover { border-color: var(--navy); }
-    .faq-q { font-weight: 700; font-size: 16px; color: var(--navy); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-    .faq-q::after { content: '+'; font-size: 22px; font-weight: 400; color: var(--gold); flex-shrink: 0; }
-    .faq-item.open .faq-q::after { content: '−'; }
-    .faq-a { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); line-height: 1.8; }
-    .faq-item.open .faq-a { display: block; }
-
-    .contact-wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: start; }
-    .contact-panel { background: var(--navy); border-radius: 28px; padding: 40px; color: #fff; box-shadow: var(--shadow); }
-    .contact-panel h3 { font-family: 'Noto Serif KR', serif; font-size: 28px; margin-bottom: 10px; }
-    .contact-panel > p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.8; }
-    .clinks { display: grid; gap: 10px; margin-top: 24px; }
-    .clink { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px 18px; font-weight: 700; font-size: 15px; color: #fff; transition: .2s; }
-    .clink:hover { background: rgba(255,255,255,0.13); }
-    .clink-icon { font-size: 20px; width: 30px; text-align: center; }
-    .contact-info { background: var(--white); border-radius: 28px; border: 1px solid var(--line); box-shadow: var(--shadow); padding: 36px; }
-    .info-row { padding: 14px 0; border-bottom: 1px solid var(--line); }
-    .info-row:first-child { padding-top: 0; }
-    .info-row:last-child { border-bottom: 0; padding-bottom: 0; }
-    .info-row strong { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-    .info-row span { font-size: 15px; color: var(--text); }
-
-    .blog-banner { background: linear-gradient(135deg, #03C75A 0%, #02a34a 100%); border-radius: 20px; padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; color: #fff; }
-    .blog-banner-text h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .blog-banner-text p { font-size: 13px; opacity: 0.85; }
-    .blog-banner-btn { background: #fff; color: #03C75A; border-radius: 999px; padding: 10px 20px; font-weight: 800; font-size: 13px; white-space: nowrap; transition: .2s; }
-    .blog-banner-btn:hover { background: #f0fff7; }
-
-    footer { background: var(--navy); color: rgba(255,255,255,0.55); padding: 36px 0 32px; font-size: 13px; margin-top: 16px; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
-    .footer-brand { font-family: 'Noto Serif KR', serif; font-size: 18px; color: #fff; font-weight: 700; margin-bottom: 8px; }
-    .footer-brand em { color: var(--gold); font-style: normal; }
-    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 16px; }
-    .footer-links a { color: rgba(255,255,255,0.55); font-size: 13px; }
-    .footer-links a:hover { color: var(--gold2); }
-
-    .mobile-cta { display: none; }
-
-    @media (max-width: 1060px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-aside { flex-direction: row; }
-      .about-grid, .price-grid, .contact-wrap { grid-template-columns: 1fr; }
-      .reason-grid { grid-template-columns: 1fr 1fr; }
-      .service-grid { grid-template-columns: 1fr 1fr; }
-      .process-track { grid-template-columns: 1fr 1fr 1fr; }
-      .process-track::before { display: none; }
-      .sms-form-grid { grid-template-columns: 1fr; }
-      .sms-form-grid textarea, .sms-submit-row { grid-column: span 1; }
+    /* Service Grid */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
-    @media (max-width: 700px) {
-      .menu { display: none; }
-      .hero, section { padding: 20px 0; }
-      .hero-copy { padding: 28px 24px; }
-      .box { padding: 28px 20px; }
-      .hero-points { grid-template-columns: 1fr; }
-      .hero-aside { flex-direction: column; }
-      .reason-grid, .service-grid, .process-track { grid-template-columns: 1fr; }
-      .contact-panel { padding: 28px 22px; }
-      .topbar-inner { flex-direction: column; gap: 4px; text-align: center; }
-      .mobile-cta { position: fixed; bottom: 16px; left: 16px; right: 16px; display: flex; gap: 10px; z-index: 300; }
-      .mobile-cta a { flex: 1; min-height: 52px; border-radius: 999px; font-size: 15px; }
-      body { padding-bottom: 86px; }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .service-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .service-price {
+      margin-top: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .pricing-card.popular {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      padding: 4px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .price {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 20px 0;
+    }
+
+    .price small {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .price-features {
+      margin: 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .price-features span {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-700);
+    }
+
+    .price-features span::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Region Section */
+    .region-section {
+      background: linear-gradient(135deg, var(--primary-soft) 0%, var(--white) 100%);
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .region-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      transition: all 0.2s;
+      border: 1px solid var(--gray-200);
+    }
+
+    .region-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .region-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .region-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .region-feature {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 14px;
+      background: var(--primary-light);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* FAQ */
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-dark);
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-question:hover {
+      opacity: 0.7;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 24px;
+      color: var(--gray-600);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 0 24px 20px 24px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 64px 0;
+    }
+
+    .cta-section h2, .cta-section p {
+      color: white;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Form Section */
+    .form-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--gray-200);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    .privacy-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .privacy-link {
+      font-size: 12px;
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 60px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .footer p, .footer a {
+      font-size: 13px;
+      text-decoration: none;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer a:hover {
+      opacity: 0.7;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 12px;
+    }
+
+    /* Floating Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary);
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.2s;
+      z-index: 99;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.1);
+      background: var(--primary-dark);
+    }
+
+    /* Mobile CTA */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 12px 20px;
+      gap: 12px;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 98;
+    }
+
+    .mobile-cta .btn {
+      flex: 1;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 1024px) {
+      .target-grid { grid-template-columns: repeat(3, 1fr); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: var(--shadow-lg);
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .nav-links.active { display: flex; }
+      .mobile-menu-btn { display: block; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero h1 { font-size: 32px; }
+      .target-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .testimonial-grid, .service-grid, .process-grid, .pricing-grid, .region-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-header h2 { font-size: 28px; }
+      .section { padding: 48px 0; }
+      .mobile-cta { display: flex; }
+      body { padding-bottom: 80px; }
+      .floating-btn { bottom: 90px; }
+      .form-wrapper { padding: 32px 24px; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      .about-card { padding: 24px; }
+      .blog-banner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .target-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .target-card { padding: 16px 12px; }
+      .target-icon { font-size: 24px; }
+      .target-card h3 { font-size: 12px; }
+      .target-card p { font-size: 10px; }
+      .service-card { padding: 20px; }
+      .pricing-card { padding: 28px 20px; }
+      .price { font-size: 32px; }
     }
   </style>
 </head>
 <body>
-
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="wrap topbar-inner">
-    <div>회계사가 직접 상담 · 인천 남동구 · 연수구 · 송도 세무회계 전문</div>
-    <div>상담 가능 <strong style="color:var(--gold2)">365일 09:00 – 22:00</strong> &nbsp;|&nbsp; <a href="tel:01086763827">010-8676-3827</a></div>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="wrap nav">
-    <a href="#home" class="brand"><em>NO</em>TAX<small>인일회계법인 김광수 회계사</small></a>
-    <nav class="menu">
-      <a href="#about">NOTAX 소개</a>
-      <a href="#service">서비스</a>
-      <a href="#process">진행 절차</a>
-      <a href="#price">기장료</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://blog.naver.com/notaxcpa" target="_blank" rel="noopener">세무이슈</a>
-      <a href="#contact" class="btn btn-primary" style="min-height:40px;padding:0 18px;font-size:13px">상담 신청</a>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="메인 네비게이션">
+      <div class="nav-container">
+        <a href="#home" class="logo" aria-label="NOTAX 홈으로">NO<span>TAX</span></a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">홈</a>
+          <a href="#about">소개</a>
+          <a href="#services">서비스</a>
+          <a href="#pricing">기장료</a>
+          <a href="#region">지역특화</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="btn btn-outline" style="padding: 8px 20px;">상담 신청</a>
+        </div>
+      </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">인천 남동구 · 연수구 · 송도 세무회계</div>
-          <h1>세금 걱정은 <span>NOTAX</span>에 맡기고<br>사업에 집중하세요</h1>
-          <p class="hero-sub">17년 경력 김광수 회계사가 법인기장부터 개인사업자 세무까지 직접 상담하고 꼼꼼하게 관리합니다.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">무료 상담 신청</a>
-            <a href="tel:01086763827" class="btn btn-gold">📞 010-8676-3827</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="메인 히어로 섹션">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              🔥 17년 경력 김광수 회계사 직접 상담
+            </div>
+            <h1>
+              세금은 <span>NOTAX</span>에 맡기고<br>
+              사업에 집중하세요
+            </h1>
+            <div class="region-tag">
+              📍 <span>인천 남동구 · 연수구 · 송도</span> 지역 특화 서비스
+            </div>
+            <p class="hero-desc">
+              법인기장부터 개인사업자 세무까지, 회계사가 직접 관리합니다.<br>
+              상담부터 신고까지 원스톱 솔루션
+            </p>
+            <div class="hero-actions" style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary" aria-label="무료 세무 점검 신청">✨ 세금 무료 점검</a>
+              <a href="tel:01086763827" class="btn btn-outline" aria-label="전화 상담 예약">📞 전화 상담 예약</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">누적 고객사</div></div>
+              <div class="stat-item"><div class="stat-number">17년</div><div class="stat-label">회계사 경력</div></div>
+              <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">회계사 직접 상담</div></div>
+            </div>
           </div>
-          <div class="hero-points">
-            <div class="hpoint"><strong>회계사 직접 상담</strong><span>인일회계법인 김광수 회계사가 직접 통화 또는 방문 상담</span></div>
-            <div class="hpoint"><strong>17년 전문 경력</strong><span>법인·개인사업자 세무 전문</span></div>
-            <div class="hpoint"><strong>365일 09~22시</strong><span>언제든 편하게 문의 가능</span></div>
-          </div>
-        </div>
-        <div class="hero-aside">
-          <div class="aside-card dark">
+          <div class="hero-card">
             <h3>지금 바로 상담 신청</h3>
-            <p class="muted">매출·업종·직원 수를 알려주시면<br>더 정확하게 안내드립니다.</p>
-            <div style="margin:16px 0; padding:20px; background:rgba(255,255,255,0.08); border-radius:12px; text-align:center;">
-              <span style="font-size:20px; font-weight:700; color:var(--gold2);">📋 신속한 세무 상담</span>
-              <p style="font-size:14px; color:rgba(255,255,255,0.8); margin-top:8px;">전화/문자/이메일 중 편하신 방법으로 연락주세요.</p>
-            </div>
-            <div class="quick-links">
-              <a class="quick-link" href="tel:01086763827"><span class="quick-link-icon">📞</span>010-8676-3827</a>
-              <a class="quick-link" href="tel:07041744748"><span class="quick-link-icon">☎️</span>070-4174-4748</a>
-              <a class="quick-link" href="mailto:notaxcpa@naver.com"><span class="quick-link-icon">✉️</span>notaxcpa@naver.com</a>
-              <a class="quick-link" href="sms:01086763827"><span class="quick-link-icon">💬</span>문자로 상담 신청</a>
+            <p>매출·업종·직원 수를 알려주시면 더 정확하게 안내드립니다.</p>
+            <div class="contact-buttons">
+              <a href="tel:01086763827" class="contact-link" aria-label="전화 걸기">📞 010-8676-3827</a>
+              <a href="tel:07041744748" class="contact-link" aria-label="대표번호 전화 걸기">☎️ 070-4174-4748</a>
+              <a href="mailto:notaxcpa@naver.com" class="contact-link" aria-label="이메일 보내기">✉️ notaxcpa@naver.com</a>
+              <a href="sms:01086763827" class="contact-link" aria-label="문자 보내기">💬 문자로 상담 신청하기</a>
+              
+              <!-- 카카오맵 배너 -->
+              <button class="map-banner" onclick="openKakaoMap()" aria-label="카카오맵으로 위치 보기">
+                <span class="map-banner-icon">📍</span>
+                <div class="map-banner-text">
+                  <div class="map-banner-title">인일회계법인</div>
+                  <div class="map-banner-address">인천 남동구 남동대로 217 한국산업단지공단 5층</div>
+                </div>
+                <span aria-hidden="true">▶</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 문자상담 Call-to-Action -->
-  <section>
-    <div class="wrap">
-      <div class="sms-cta-box">
-        <h3>📲 간편 문자 상담 신청</h3>
-        <p>아래 정보를 입력하고 버튼을 누르면 스마트폰 문자 앱이 열리며 내용이 자동 입력됩니다. '보내기'만 누르세요!</p>
-        <div class="sms-form-grid" id="smsForm">
-          <input type="text" id="smsName" placeholder="성명">
-          <input type="text" id="smsBiz" placeholder="상호 (업체명)">
-          <input type="text" id="smsSales" placeholder="월 매출액 (예: 1,000만원)">
-          <textarea id="smsConcern" placeholder="고민사항 (간단히)" rows="2"></textarea>
-          <div class="sms-submit-row">
-            <button class="btn btn-gold" onclick="sendSMS()">문자 보내기</button>
-          </div>
-        </div>
-        <div class="sms-note">※ 전송되는 번호는 010-8636-3827 입니다. 입력하신 내용은 저장되지 않습니다.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head">
-          <div class="sec-label">About</div>
+    <!-- About Section -->
+    <section class="section" id="about" aria-label="NOTAX 소개 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">ABOUT</div>
           <h2>NOTAX 소개</h2>
+          <p>17년 경력의 김광수 회계사가 직접 상담하고 관리합니다</p>
         </div>
         <div class="about-grid">
-          <div class="about-profile">
-            <div class="profile-name">김광수 회계사</div>
-            <div class="profile-title">인일회계법인 공인회계사</div>
+          <div class="about-card">
+            <div class="profile-header">
+              <div class="profile-avatar">👨‍💼</div>
+              <div class="profile-title">
+                <h3>김광수 회계사</h3>
+                <p>인일회계법인 공인회계사</p>
+              </div>
+            </div>
             <ul class="profile-list">
               <li>공인회계사 자격 취득 (2009년~)</li>
               <li>법인사업자 기장 및 세무조정 전문</li>
@@ -588,199 +1228,380 @@
               <li>인천 남동구·연수구·송도 지역 특화</li>
             </ul>
           </div>
-          <div class="about-desc">
-            <h3>NOTAX의 철학</h3>
-            <p>저가 기장이나 무리한 환급보다 <strong>정확한 신고와 사후관리의 안정성</strong>을 먼저 생각합니다.<br><br>
-            회계사가 직접 담당하기 때문에 담당자 바뀜이나 소통 단절이 없습니다. 세금 문제로 불안하거나, 지금 담당 세무소와 소통이 어렵다면 언제든 연락 주세요.<br><br>
-            특히 창업 초기·법인 전환·대표자 급여 설계처럼 <strong>처음 설계가 중요한 시점</strong>에 함께하시면 가장 큰 효과를 드릴 수 있습니다.</p>
+          <div class="about-card philosophy-card">
+            <h3>📖 NOTAX의 철학</h3>
+            <p class="philosophy-text">저가 기장이나 무리한 환급보다 <strong>정확한 신고와 사후관리의 안정성</strong>을 먼저 생각합니다.</p>
+            <p class="philosophy-text">회계사가 직접 담당하기 때문에 담당자 바뀜이나 소통 단절이 없습니다. 세금 문제로 불안하거나, 지금 담당 세무소와 소통이 어렵다면 언제든 연락 주세요.</p>
+            <p class="philosophy-text">특히 창업 초기·법인 전환·대표자 급여 설계처럼 <strong>처음 설계가 중요한 시점</strong>에 함께하시면 가장 큰 효과를 드릴 수 있습니다.</p>
           </div>
         </div>
-        <a class="blog-banner" href="https://blog.naver.com/notaxcpa" target="_blank" rel="noopener">
-          <div class="blog-banner-text">
+        
+        <!-- 네이버 블로그 배너 -->
+        <a href="https://blog.naver.com/notaxcpa" target="_blank" rel="noopener noreferrer" class="blog-banner" aria-label="네이버 블로그 방문하기">
+          <div class="blog-banner-content">
             <h4>📝 NOTAX 네이버 블로그</h4>
             <p>세금 절세 팁, 법인·개인사업자 실무 정보를 무료로 제공합니다</p>
           </div>
           <div class="blog-banner-btn">블로그 방문하기 →</div>
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHY -->
-  <section>
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head">
-          <div class="sec-label">Why NOTAX</div>
-          <h2>왜 NOTAX인가</h2>
-          <p>숫자 뒤에 있는 사람을 먼저 봅니다. 대표님의 사업 구조와 미래를 함께 고민합니다.</p>
+    <!-- Target Audience -->
+    <section class="section" aria-label="타겟 고객 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">WHO WE HELP</div>
+          <h2>이런 분들이 찾아주세요</h2>
+          <p>해당하는 항목을 클릭하면 간편하게 상담 신청할 수 있습니다</p>
         </div>
-        <div class="reason-grid">
-          <div class="reason-card"><div class="reason-icon">🎯</div><h3>저가보다 정확한 신고</h3><p>싼 가격보다 정확한 신고가 장기적으로 유리합니다. 가산세·추징으로 훨씬 큰 손실이 날 수 있습니다.</p></div>
-          <div class="reason-card"><div class="reason-icon">🤝</div><h3>회계사 직접 연락</h3><p>담당자가 바뀌거나 모르는 직원과 소통하는 일이 없습니다. 김광수 회계사가 직접 상담합니다.</p></div>
-          <div class="reason-card"><div class="reason-icon">🛡️</div><h3>안전한 절세</h3><p>무리한 환급 신고보다 검증된 절세 방법을 선택합니다. 세무조사 위험을 최소화합니다.</p></div>
-          <div class="reason-card"><div class="reason-icon">🚀</div><h3>사업 확장까지 함께</h3><p>기장만 하는 게 아니라 법인전환, 대표자 급여 설계, 가업승계까지 중장기 관점으로 상담합니다.</p></div>
+        <div class="target-grid">
+          <div class="target-card" onclick="goToContact('법인사업자')" role="button" tabindex="0" aria-label="법인사업자 상담 신청">
+            <div class="target-icon">🏢</div><h3>법인사업자</h3><p>법인세·부가세 신고 + 세무기장</p>
+          </div>
+          <div class="target-card" onclick="goToContact('개인사업자')" role="button" tabindex="0" aria-label="개인사업자 상담 신청">
+            <div class="target-icon">👨‍💼</div><h3>개인사업자</h3><p>종합소득세 신고 + 세무기장</p>
+          </div>
+          <div class="target-card" onclick="goToContact('예비창업자')" role="button" tabindex="0" aria-label="예비창업자 상담 신청">
+            <div class="target-icon">🚀</div><h3>예비창업자</h3><p>창업 세무설계</p>
+          </div>
+          <div class="target-card" onclick="goToContact('세무사 변경 고객')" role="button" tabindex="0" aria-label="세무사 변경 고객 상담 신청">
+            <div class="target-icon">🔄</div><h3>세무사 변경</h3><p>소통 어려운 분</p>
+          </div>
+          <div class="target-card" onclick="goToContact('유튜브·N잡러')" role="button" tabindex="0" aria-label="유튜브 N잡러 상담 신청">
+            <div class="target-icon">📺</div><h3>유튜브·N잡</h3><p>유튜브, 스마트스토어, 구매대행</p>
+          </div>
+          <div class="target-card" onclick="goToContact('임대소득자')" role="button" tabindex="0" aria-label="임대소득자 상담 신청">
+            <div class="target-icon">🏠</div><h3>임대소득자</h3><p>주택·상가 임대</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICE, PROCESS, PRICE, FAQ 등은 이전 코드와 동일하지만 스타일/이미지 정리하여 포함시킵니다 -->
-  <!-- SERVICE -->
-  <section id="service">
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head"><div class="sec-label">Service</div><h2>서비스 안내</h2><p>법인부터 개인사업자까지, 창업 초기부터 폐업까지 모든 세무·회계 업무를 처리합니다.</p></div>
+    <!-- Testimonials -->
+    <section class="section testimonials" aria-label="고객 후기 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">CUSTOMER REVIEWS</div>
+          <h2>실제 고객님들의 생생한 후기</h2>
+          <p>5년간 500+ 사업자님들의 선택을 받았습니다</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"회계사님이 직접 상담해주셔서 믿음이 갔습니다. 세무 때문에 스트레스 받지 않고 사업에만 집중할 수 있어요."</div>
+            <div class="testimonial-author"><div class="author-avatar">김</div><div class="author-info"><h4>김대표님</h4><p>송도 법인사업자 · 제조업</p></div></div>
+            <div class="save-amount">💰 연간 약 800만원 절세</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"저가 기장에 속았던 경험이 있는데, NOTAX는 정말 꼼꼼하게 챙겨주십니다. 추후 문제도 미리 방지해주셨어요."</div>
+            <div class="testimonial-author"><div class="author-avatar">박</div><div class="author-info"><h4>박사장님</h4><p>남동구 개인사업자 · 도소매업</p></div></div>
+            <div class="save-amount">💰 가산세 300만원 절감</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"창업 초기부터 함께했는데, 법인전환부터 급여 설계까지 체계적으로 도와주셔서 정말 감사합니다."</div>
+            <div class="testimonial-author"><div class="author-avatar">이</div><div class="author-info"><h4>이대표님</h4><p>연수구 법인전환 · IT업체</p></div></div>
+            <div class="save-amount">💰 법인세 500만원 절감</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" aria-label="진행 절차 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">PROCESS</div>
+          <h2>상담부터 신고까지 3단계</h2>
+          <p>복잡한 절차 없이 간단하게 진행됩니다. 첫 상담은 무료입니다.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><div class="step-number">1</div><h3>상담 신청</h3><p>전화·문자·이메일로 간편하게 신청</p></div>
+          <div class="process-step"><div class="step-number">2</div><h3>회계사 직접 검토</h3><p>김광수 회계사가 직접 상황 분석</p></div>
+          <div class="process-step"><div class="step-number">3</div><h3>기장·신고·관리</h3><p>지속적인 사후관리까지 원스톱</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services" aria-label="서비스 안내 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">SERVICES</div>
+          <h2>전문 서비스 안내</h2>
+          <p>법인부터 개인사업자까지, 창업부터 폐업까지 모든 세무 업무</p>
+        </div>
         <div class="service-grid">
-          <div class="service-card"><div class="service-num">01</div><h3>법인사업자 기장</h3><p>월별 기장, 부가가치세 신고, 법인세 신고, 결산까지 일괄 처리합니다.</p><span class="service-tag">월 기장료 적용</span></div>
-          <div class="service-card"><div class="service-num">02</div><h3>개인사업자 기장</h3><p>부가세 신고, 종합소득세 신고, 성실신고 확인까지.</p><span class="service-tag">월 기장료 적용</span></div>
-          <div class="service-card"><div class="service-num">03</div><h3>창업 세무상담</h3><p>업종 선택, 사업자 유형 결정, 초기 세무설계.</p><span class="service-tag">별도 상담</span></div>
-          <div class="service-card"><div class="service-num">04</div><h3>세무조정</h3><p>법인세·종합소득세 세무조정, 조정계산서 작성.</p><span class="service-tag">연 1회</span></div>
-          <div class="service-card"><div class="service-num">05</div><h3>환급 검토</h3><p>과거 신고 오류나 누락 공제 항목 검토.</p><span class="service-tag">별도 상담</span></div>
-          <div class="service-card"><div class="service-num">06</div><h3>대표님 세무 상담</h3><p>급여 설계, 법인전환, 가업승계 종합 상담.</p><span class="service-tag">별도 상담</span></div>
+          <div class="service-card"><div class="service-icon">🏢</div><h3>법인사업자 기장</h3><p>월별 기장, 부가세 신고, 법인세 신고, 결산 일괄 처리</p><div class="service-price">월 12만원~</div></div>
+          <div class="service-card"><div class="service-icon">👨‍💻</div><h3>개인사업자 기장</h3><p>부가세 신고, 종합소득세 신고, 성실신고 확인</p><div class="service-price">월 8만원~(협의가능)</div></div>
+          <div class="service-card"><div class="service-icon">💡</div><h3>창업 세무상담</h3><p>업종 선택, 사업자 유형 결정, 초기 세무설계</p><div class="service-price">무료 상담</div></div>
+          <div class="service-card"><div class="service-icon">📊</div><h3>세무조정</h3><p>법인세·종합소득세 세무조정, 조정계산서 작성</p><div class="service-price">연 1회 · 별도</div></div>
+          <div class="service-card"><div class="service-icon">🔍</div><h3>환급 검토</h3><p>과거 신고 오류나 누락 공제 항목 검토</p><div class="service-price">무료 점검 후 상담</div></div>
+          <div class="service-card"><div class="service-icon">🎯</div><h3>종합 세무 컨설팅</h3><p>급여 설계, 법인전환, 가업승계 전략 수립</p><div class="service-price">맞춤 견적</div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head"><div class="sec-label">Process</div><h2>상담부터 신고까지</h2><p>복잡한 절차 없이 간단하게 진행됩니다. 첫 상담은 무료입니다.</p></div>
-        <div class="process-track">
-          <div class="pstep"><div class="pstep-num">1</div><h3>상담 신청</h3><p>전화·문자·이메일</p></div>
-          <div class="pstep"><div class="pstep-num">2</div><h3>기본 현황 파악</h3><p>업종·매출·직원 수</p></div>
-          <div class="pstep"><div class="pstep-num">3</div><h3>자료 안내</h3><p>필요 서류 목록 안내</p></div>
-          <div class="pstep"><div class="pstep-num">4</div><h3>회계사 직접 검토</h3><p>김광수 회계사 검토</p></div>
-          <div class="pstep"><div class="pstep-num">5</div><h3>기장·신고·관리</h3><p>지속 사후관리</p></div>
+    <!-- Pricing -->
+    <section class="section" id="pricing" aria-label="기장료 안내 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">PRICING</div>
+          <h2>합리적인 기장료</h2>
+          <p>최소 기준이며 업종·거래량에 따라 변동됩니다. 상담 후 정확한 견적을 안내드립니다.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card popular">
+            <div class="popular-badge">🌟 가장 많이 선택</div>
+            <h3>개인사업자 기장</h3>
+            <div class="price">월 8만원~<small>(협의가능)</small></div>
+            <div class="price-features"><span>부가가치세 신고</span><span>종합소득세 신고</span><span>성실신고 확인</span></div>
+            <a href="#contact" class="btn btn-primary" style="width: 100%;" aria-label="개인사업자 상담 신청">상담 신청</a>
+          </div>
+          <div class="pricing-card">
+            <h3>법인사업자 기장</h3>
+            <div class="price">월 12만원~</div>
+            <div class="price-features"><span>월별 기장</span><span>부가가치세 신고</span><span>법인세 신고</span></div>
+            <a href="#contact" class="btn btn-outline" style="width: 100%;" aria-label="법인사업자 상담 신청">상담 신청</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRICE -->
-  <section id="price">
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head"><div class="sec-label">Pricing</div><h2>기장료 안내</h2><p>최소 기준이며 업종·거래량에 따라 변동됩니다. 상담 후 정확한 견적을 안내드립니다.</p></div>
-        <div class="price-grid">
-          <div class="price-card individual">
-            <div class="price-badge ind">개인사업자</div><h3>개인사업자 기장</h3>
-            <div class="price-main">월 8만원~</div><div class="price-muted">연 세무조정수수료 30~100만원</div>
-            <div class="price-note">연간 합계 약 126만원부터 · 부가세 별도</div>
-          </div>
-          <div class="price-card corp">
-            <div class="price-badge corp">법인사업자</div><h3>법인사업자 기장</h3>
-            <div class="price-main">월 12만원~</div><div class="price-muted">연 세무조정수수료 40만원~</div>
-            <div class="price-note">연간 합계 약 184만원부터 · 부가세 별도</div>
-          </div>
+    <!-- Region Specialized -->
+    <section class="section region-section" id="region" aria-label="인천 지역 맞춤 서비스 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">LOCAL SPECIALIZED</div>
+          <h2>인천 지역 맞춤 서비스</h2>
+          <p>남동구 · 연수구 · 송도 지역 사업자분들을 위한 특화 혜택</p>
         </div>
-        <div class="price-disclaimer">💡 창업상담·세무조정·환급검토 등 건별 업무는 별도 상담 후 안내드립니다.</div>
+        <div class="region-grid">
+          <div class="region-card"><div class="region-icon">🏭</div><h3>남동구</h3><p>남동국가산업단지 기업 밀집 지역<br>법인세무 전문으로 빠른 대응</p><span class="region-feature">✔ 당일 방문 상담 가능</span></div>
+          <div class="region-card"><div class="region-icon">🏫</div><h3>연수구</h3><p>송도국제도시 · 연수동 상권 밀집<br>개인사업자 · 프리랜서 특화</p><span class="region-feature">✔ 창업 세무설계 우대</span></div>
+          <div class="region-card"><div class="region-icon">🌆</div><h3>송도</h3><p>기업 · 스타트업 밀집 지역<br>법인전환 · IR 대비 세무 전문</p><span class="region-feature">✔ 투자 유치 세무 자문</span></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="box">
-        <div class="sec-head"><div class="sec-label">FAQ</div><h2>자주 묻는 질문</h2></div>
-        <div class="faq-list">
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">세무사무소가 많은데, NOTAX는 무엇이 다른가요?</div>
-            <div class="faq-a">저가형 기장보다 정확한 신고와 사후관리를 우선합니다. 회계사가 직접 상담·관리합니다.</div>
-          </div>
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">창업 전인데 상담받아도 되나요?</div>
-            <div class="faq-a">네, 창업 전 상담이 오히려 가장 효과적입니다.</div>
-          </div>
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">세무사무소 변경은 어떻게 하나요?</div>
-            <div class="faq-a">NOTAX로 세무대리인을 이전하면 됩니다. 절차는 간단히 안내해 드립니다.</div>
-          </div>
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">상담 전에 무엇을 준비하면 좋을까요?</div>
-            <div class="faq-a">매출 규모, 업종, 직원 수, 고민사항을 간단히 정리해 주시면 좋습니다.</div>
-          </div>
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">인천 외 지역도 가능한가요?</div>
-            <div class="faq-a">원격 서비스로 전국 어디서든 상담 가능합니다.</div>
-          </div>
-          <div class="faq-item" onclick="this.classList.toggle('open')">
-            <div class="faq-q">전화 연결이 어려우면?</div>
-            <div class="faq-a">문자나 이메일(<a href="mailto:notaxcpa@naver.com">notaxcpa@naver.com</a>)로 연락 주시면 빠르게 답변드립니다.</div>
-          </div>
+    <!-- CTA Banner -->
+    <section class="cta-section" aria-label="행동 유도 섹션">
+      <div class="container">
+        <h2>지금 바로 무료 세무 점검 받으세요</h2>
+        <p style="margin-bottom: 24px;">회계사가 직접 상담하고, 숨은 절세 포인트를 찾아드립니다</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#contact" class="btn btn-white" aria-label="간편 문자 상담 신청">📋 간편 문자 상담 신청</a>
+          <a href="tel:01086763827" class="btn btn-white" aria-label="전화 상담">📞 010-8676-3827</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="contact-wrap">
-        <div class="contact-panel">
-          <h3>지금 상담 신청하세요</h3>
-          <p>고객님의 상황을 간단히 알려주시면 더 정확하게 안내해드릴 수 있습니다.</p>
-          <div class="clinks">
-            <a class="clink" href="tel:01086763827"><span class="clink-icon">📞</span>전화 바로 걸기 · 010-8676-3827</a>
-            <a class="clink" href="tel:07041744748"><span class="clink-icon">☎️</span>대표번호 · 070-4174-4748</a>
-            <a class="clink" href="mailto:notaxcpa@naver.com"><span class="clink-icon">✉️</span>이메일 · notaxcpa@naver.com</a>
-            <a class="clink" href="sms:01086763827"><span class="clink-icon">💬</span>문자로 상담 신청하기</a>
-            <a class="clink" href="https://blog.naver.com/notaxcpa" target="_blank" rel="noopener"><span class="clink-icon">📝</span>네이버 블로그 바로가기</a>
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-label="자주 묻는 질문 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">FAQ</div>
+          <h2>자주 묻는 질문</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">세무사무소가 많은데, NOTAX는 무엇이 다른가요?<span aria-hidden="true">▼</span></button>
+            <div class="faq-answer">저가형 기장보다 정확한 신고와 사후관리를 우선합니다. 회계사가 직접 상담·관리합니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">창업 전인데 상담받아도 되나요?<span aria-hidden="true">▼</span></button>
+            <div class="faq-answer">네, 창업 전 상담이 오히려 가장 효과적입니다. 사업자 유형 선택, 업종 결정, 초기 세무설계를 미리 준비할 수 있습니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">인천 외 지역도 가능한가요?<span aria-hidden="true">▼</span></button>
+            <div class="faq-answer">네, 원격 서비스로 전국 어디서든 상담 가능합니다. 문서는 이메일로 주고받고, 화상 상담도 가능합니다.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">세무사무소 변경은 어떻게 하나요?<span aria-hidden="true">▼</span></button>
+            <div class="faq-answer">NOTAX로 세무대리인을 이전하면 됩니다. 절차는 간단히 안내해 드립니다.</div>
           </div>
         </div>
-        <div class="contact-info">
-          <div class="info-row"><strong>Location</strong><span>인천 남동구 남동대로 217<br>한국산업단지공단 인천지역본부 5층<br><small style="color:var(--muted)">남동인더스파크역 1번 출구 도보 5분</small></span></div>
-          <div class="info-row"><strong>Phone</strong><span>010-8676-3827 / 070-4174-4748</span></div>
-          <div class="info-row"><strong>Email</strong><span><a href="mailto:notaxcpa@naver.com">notaxcpa@naver.com</a></span></div>
-          <div class="info-row"><strong>Hours</strong><span>365일 09:00 – 22:00<br><small style="color:var(--muted)">통화량이 많아 문자·이메일 권장</small></span></div>
-          <div class="info-row"><strong>Service Area</strong><span>인천 남동구 · 연수구 · 송도<br><small style="color:var(--muted)">원격 서비스로 전국 상담 가능</small></span></div>
-        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand"><em>NO</em>TAX 세무회계</div>
-        <div>인일회계법인 · 김광수 공인회계사 &nbsp;|&nbsp; 인천 남동구 남동대로 217 한국산업단지공단 5층</div>
-        <div style="margin-top:6px"> 010-8676-3827 / 070-4174-4748 &nbsp;|&nbsp; <a href="mailto:notaxcpa@naver.com">notaxcpa@naver.com</a></div>
-        <div class="footer-links">
-          <a href="#about">NOTAX 소개</a><a href="#service">서비스</a><a href="#price">기장료</a><a href="#faq">FAQ</a>
-          <a href="https://blog.naver.com/notaxcpa" target="_blank" rel="noopener">세무이슈</a><a href="#contact">상담 신청</a>
+    <!-- Contact Form -->
+    <section class="section" id="contact" aria-label="상담 신청 폼 섹션">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">CONTACT</div>
+          <h2>간편하게 상담 신청하세요</h2>
+          <p>전화, 문자, 이메일 중 편하신 방법으로 연락주시면 빠르게 답변드립니다</p>
+        </div>
+        <div class="form-wrapper">
+          <form id="contactForm" onsubmit="return sendSMS(event)">
+            <div class="form-group">
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" required placeholder="이름을 입력해주세요">
+              <div class="error-message" id="nameError">이름을 입력해주세요.</div>
+            </div>
+            <div class="form-group">
+              <label for="phone">연락처</label>
+              <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678">
+              <div class="error-message" id="phoneError">올바른 전화번호를 입력해주세요 (예: 010-1234-5678)</div>
+            </div>
+            <div class="form-group">
+              <label for="message">매출 규모 / 업종 / 문의사항</label>
+              <textarea id="message" name="message" rows="4" required placeholder="예: 연 매출 5억, 소매업, 법인전환 상담 문의"></textarea>
+              <div class="error-message" id="messageError">문의사항을 입력해주세요.</div>
+            </div>
+            <div class="form-group">
+              <div class="privacy-wrapper">
+                <input type="checkbox" id="privacyCheck" required style="width: auto;">
+                <label for="privacyCheck" style="margin: 0;">개인정보 수집 및 이용에 동의합니다</label>
+                <a href="#" class="privacy-link" onclick="showPrivacyPolicy(); return false;" aria-label="개인정보처리방침 보기">(약관보기)</a>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" aria-label="문자로 상담 신청하기">문자로 상담 신청하기 ✉️</button>
+          </form>
+          <div style="text-align: center; margin-top: 24px;">
+            <p style="color: var(--gray-600);">또는 아래로 직접 연락주세요</p>
+            <p style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: var(--primary);">📞 010-8676-3827</p>
+            <p style="color: var(--gray-600);">✉️ notaxcpa@naver.com</p>
+          </div>
         </div>
       </div>
-      <div style="font-size:12px; text-align:right; color:rgba(255,255,255,0.35)">
-        © 2026 NOTAX 세무회계<br>김광수 공인회계사
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>NOTAX 세무회계</h4><p>인일회계법인 김광수 회계사</p><p>17년 경력 법인·개인사업자 전문</p></div>
+        <div><h4>오시는 길</h4><p>인천 남동구 남동대로 217<br>한국산업단지공단 인천지역본부 5층<br>남동인더스파크역 1번 출구 도보 5분</p></div>
+        <div><h4>업무 시간</h4><p>365일 09:00 - 22:00<br>통화량이 많을 시 문자·이메일 권장</p></div>
+        <div><h4>서비스 지역</h4><p>인천 남동구 · 연수구 · 송도<br>원격 서비스로 전국 상담 가능</p></div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2025 NOTAX 세무회계. All rights reserved. | 김광수 공인회계사</p>
       </div>
     </div>
+  </footer>
+
+  <!-- Floating Button -->
+  <a href="tel:01086763827" class="floating-btn" aria-label="전화 걸기">📞</a>
+
+  <!-- Mobile CTA -->
+  <div class="mobile-cta">
+    <a href="tel:01086763827" class="btn btn-outline" aria-label="전화 문의">📞 전화 문의</a>
+    <a href="#contact" class="btn btn-primary" aria-label="상담 신청">상담 신청</a>
   </div>
-</footer>
 
-<div class="mobile-cta">
-  <a href="tel:01086763827" class="btn btn-outline">📞 전화 문의</a>
-  <a href="https://blog.naver.com/notaxcpa" target="_blank" class="btn btn-outline">📝 세무이슈</a>
-  <a href="#contact" class="btn btn-primary">상담 신청</a>
-</div>
-
-<script>
-  function sendSMS() {
-    const name = document.getElementById('smsName').value.trim();
-    const biz = document.getElementById('smsBiz').value.trim();
-    const sales = document.getElementById('smsSales').value.trim();
-    const concern = document.getElementById('smsConcern').value.trim();
-    if (!name || !biz || !concern) {
-      alert('성명, 상호, 고민사항은 필수 입력입니다.');
-      return;
+  <script>
+    // 모바일 메뉴 토글
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      const isExpanded = nav.classList.contains('active');
+      nav.classList.toggle('active');
+      document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', !isExpanded);
     }
-    const body = `[NOTAX 상담신청]%0A성명: ${name}%0A상호: ${biz}%0A매출액: ${sales || '미입력'}%0A고민사항: ${concern}`;
-    window.location.href = `sms:01086363827?body=${body}`;
-  }
-</script>
+
+    // FAQ 토글 (접근성 개선)
+    function toggleFaq(button) {
+      const faqItem = button.closest('.faq-item');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isExpanded);
+      faqItem.classList.toggle('active');
+    }
+
+    // 상담 폼으로 이동 + 자동 입력
+    function goToContact(targetType) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      const messageField = document.getElementById('message');
+      if (messageField) {
+        const currentMessage = messageField.value;
+        const newMessage = `[${targetType}] 상담 문의드립니다.\n${currentMessage}`.trim();
+        messageField.value = newMessage;
+        messageField.focus();
+      }
+    }
+
+    // 카카오맵 열기
+    function openKakaoMap() {
+      const address = encodeURIComponent('인천 남동구 남동대로 217 한국산업단지공단 인천지역본부 5층');
+      window.open(`https://map.kakao.com/link/search/${address}`, '_blank', 'noopener,noreferrer');
+    }
+
+    // 전화번호 유효성 검사
+    function validatePhoneNumber(phone) {
+      const phoneRegex = /^\d{2,3}-\d{3,4}-\d{4}$/;
+      return phoneRegex.test(phone);
+    }
+
+    // 문자 발송 (개선된 버전)
+    function sendSMS(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+      const message = document.getElementById('message');
+      const privacyCheck = document.getElementById('privacyCheck');
+      
+      // 에러 메시지 숨기기 초기화
+      document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+      
+      let isValid = true;
+      
+      if (!name.value.trim()) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!validatePhoneNumber(phone.value)) {
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!message.value.trim()) {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (!privacyCheck.checked) {
+        alert('개인정보 수집 및 이용에 동의해주세요.');
+        isValid = false;
+      }
+      
+      if (!isValid) return false;
+      
+      const smsBody = `[NOTAX 세무상담]\n이름: ${name.value}\n연락처: ${phone.value}\n문의: ${message.value}`;
+      window.location.href = `sms:01086763827?body=${encodeURIComponent(smsBody)}`;
+      alert('문자 앱이 열리면 "보내기" 버튼을 눌러주세요.');
+      
+      // 폼 초기화
+      document.getElementById('contactForm').reset();
+      return false;
+    }
+
+    // 개인정보처리방침 모달 (간단한 alert, 실제로는 별도 페이지 권장)
+    function showPrivacyPolicy() {
+      alert('개인정보처리방침\n\n1. 수집 항목: 이름, 연락처, 상담 내용\n2. 수집 목적: 세무 상담 및 서비스 제공\n3. 보관 기간: 상담 완료 후 1년\n4. 동의 거부 시 상담이 제한될 수 있습니다.\n\n자세한 내용은 문의 바랍니다.');
+    }
+
+    // 스무스 스크롤 + 메뉴 닫기
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('navLinks')?.classList.remove('active');
+          document.querySelector('.mobile-menu-btn')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
